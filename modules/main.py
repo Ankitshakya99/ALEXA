@@ -343,8 +343,8 @@ async def txt_handler(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**<pre><code>🎞️ 𝐕𝐈𝐃_𝐈𝐃: {str(count).zfill(3)}.</code></pre>\n\n<pre><code>📝 𝐓𝐈𝐓𝐋𝐄:👇🏻</code></pre>\n<pre><code>{name1} {res} .mkv</code></pre>\n\n<pre><code>📚 𝐁𝐀𝐓𝐂𝐇 𝐍𝐀𝐌𝐄:👇🏻</code>\n</pre><pre><code>{b_name}</code></pre>\n\n<pre><code>✨𝐄𝐗𝐓𝐑𝐀𝐂𝐓𝐄𝐃 𝐁𝐘 : {CR}</code></pre>**\n\n<pre><code>━━━━━✦𝐀𝐍𝐊𝐈𝐓❤️✦━━━━━</code></pre>'
-                cc1 = f'**<pre><code>📁 𝐏𝐃𝐅_𝐈𝐃: {str(count).zfill(3)}.</code></pre>\n\n<pre><code>📝 𝐓𝐈𝐓𝐋𝐄:👇🏻</code></pre>\n<pre><code>{name1} .pdf</code></pre>\n\n<pre><code>📚 𝐁𝐀𝐓𝐂𝐇 𝐍𝐀𝐌𝐄:👇🏻</code>\n</pre><pre><code>{b_name}</code></pre>\n\n<pre><code>✨𝐄𝐗𝐓𝐑𝐀𝐂𝐓𝐄𝐃 𝐁𝐘 : {CR}</code></pre>**\n\n<pre><code>━━━━━✦𝐀𝐍𝐊𝐈𝐓❤️✦━━━━━</code></pre>'
+                cc = f'**<pre><code>🎞️ 𝐕𝐈𝐃_𝐈𝐃: {str(count).zfill(3)}.</code></pre>\n\n<pre><code>📝 𝐓𝐈𝐓𝐋𝐄:👇🏻</code></pre>\n<pre><code>{name1} {res} .mkv</code></pre>\n\n<pre><code>📚 𝐁𝐀𝐓𝐂𝐇 𝐍𝐀𝐌𝐄:👇🏻</code>\n</pre><pre><code>{b_name}</code></pre>\n\n<pre><code>🌟 𝐄𝐗𝐓𝐑𝐀𝐂𝐓𝐄𝐃 𝐁𝐘:👇🏻</code>\n</pre><pre><code>{CR}</code></pre>\n\n<pre><code>━━━━━✦𝐀𝐍𝐊𝐈𝐓❤️✦━━━━━</code></pre>'
+                cc1 = f'**<pre><code>📁 𝐏𝐃𝐅_𝐈𝐃: {str(count).zfill(3)}.</code></pre>\n\n<pre><code>📝 𝐓𝐈𝐓𝐋𝐄:👇🏻</code></pre>\n<pre><code>{name1} .pdf</code></pre>\n\n<pre><code>📚 𝐁𝐀𝐓𝐂𝐇 𝐍𝐀𝐌𝐄:👇🏻</code>\n</pre><pre><code>{b_name}</code></pre>\n\n<pre><code>🌟 𝐄𝐗𝐓𝐑𝐀𝐂𝐓𝐄𝐃 𝐁𝐘 :👇🏻</code>\n</pre><pre><code>{CR}</code></pre>\n\n<pre><code>━━━━━✦𝐀𝐍𝐊𝐈𝐓❤️✦━━━━━</code></pre>'
                     
                 
                 if "drive" in url:
@@ -408,7 +408,7 @@ async def txt_handler(bot: Client, m: Message):
 
            
                 else:
-                    Show = f"📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠  »\n\n📄 Title:- `{name}\n\n𝐓𝐚𝐭𝐚𝐥 𝐔𝐑𝐋 🔗 {len(links)}\n\n⌨ 𝐐𝐮𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**🔗 𝐔𝐑𝐋 »** `{url}`\n\n**𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ ᴀɴᴋɪᴛ sʜᴀᴋʏᴀ"
+                    Show = f"📥 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠  »\n\n📄 Title:- `{name}\n\n🔗𝐓𝐚𝐭𝐚𝐥 𝐔𝐑𝐋 » {len(links)}\n\n⌨ 𝐐𝐮𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**🔗 𝐔𝐑𝐋 »** `{url}`\n\n**𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ ᴀɴᴋɪᴛ sʜᴀᴋʏᴀ"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -426,7 +426,7 @@ async def txt_handler(bot: Client, m: Message):
     except Exception as e:
         await m.reply_text(e)
     await m.reply_text("🔰Done🔰")
-    await m.reply_text("🥰Thanks For Choosing")
+    await m.reply_text("✨Thanks For Choosing")
 
 @bot.on_message(filters.command(["visionpdf"]) )
 async def vision_pdf(bot: Client, m: Message):
