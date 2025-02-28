@@ -8,7 +8,7 @@ RUN apt-get update -y && apt-get upgrade -y \
 
 COPY . /app/
 WORKDIR /app/
-RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 ENV COOKIES_FILE_PATH="/youtube_cookies.txt"
 #CMD ["python3", "modules/main.py"]
 CMD python3 modules/main.py
