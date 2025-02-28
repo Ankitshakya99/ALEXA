@@ -4,7 +4,7 @@ import sys
 import json
 import time
 import asyncio
-import requests
+
 import subprocess
 import urllib.parse
 import yt_dlp
